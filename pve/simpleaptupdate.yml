@@ -1,5 +1,5 @@
 ---
-- name: Update web servers
+- name: Update Servers
   hosts: pve
   remote_user: root
 
