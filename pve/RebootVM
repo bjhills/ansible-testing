@@ -1,0 +1,22 @@
+---
+- name: Reboot VM
+  hosts: localhost
+
+  tasks:
+  - name: Stop VM
+    community.general.proxmox:
+      vmid:
+      api_user: ansible@pve
+      api_token_id:
+      api_token_secret: 
+      api_host: pve0.local
+      state: stopped
+
+  - name: Start VM
+    community.general.proxmox:
+      vmid:
+      api_user: ansible@pve
+      api_token_id:
+      api_token_secret: 
+      api_host: pve0.local
+      state: started
